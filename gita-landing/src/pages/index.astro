@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets"
+
+import Layout from "@layouts/Layout.astro"
+import Navbar from "@components/Navbar.astro"
+import panter from "@img/panter.png"
+---
+
+<Layout title="Welcome to Astro.">
+	<Navbar />
+	<main class="w-3/4 h-screen relative">
+		<div></div>
+		<div class="mt-32 flex flex-col md:flex-row gap-2 md:gap-4 md:items-baseline">
+			<h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-[var(--color-pink)]">CLI automation tool</h1>
+			<p class="text-lg text-center md:text-left">
+				Automate your git CLI commands with a simple and easy to use tool.
+			</p>
+		</div>
+
+		<Image
+			src={panter}
+			alt="Astro Logo"
+			class="absolute bottom-5 md:bottom-14 md:-left-[22%] w-[700px] 2xl:w-[900px]"
+		/>
+	</main>
+</Layout>
